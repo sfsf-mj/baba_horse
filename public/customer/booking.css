@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* استايل عام للصفحة */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #4b320d;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(5px);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #BFAE9C;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(44, 62, 80, 0.5);
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+}
+
+h1::before {
+    content: "\f6c0";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #D4AF37;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* استايل النموذج */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(191, 174, 156, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(44, 62, 80, 0.3);
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input, select {
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #2C3E50;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000000;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #D4AF37;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(44, 62, 80, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* زر الحجز */
+.button-primary {
+    background: linear-gradient(to right, #6B8E23, #556B2F);
+    color: #F8F1E9;
+}
+
+.button-primary:hover {
+    background: linear-gradient(to right, #556B2F, #6B8E23);
+    transform: scale(1.05);
+}
+
+/* زر الإلغاء */
+.button-secondary {
+    background: linear-gradient(to right, #4E342E, #3B2F2F);
+    color: #F8F1E9;
+}
+
+.button-secondary:hover {
+    background: linear-gradient(to right, #3B2F2F, #4E342E);
+    transform: scale(1.05);
+}
+
+/* تأثيرات إضافية */
+h1, h2 {
+    animation: fadeIn 3s ease-in-out;
+}
+
+button {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-70px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* استايل الحقول الخاصة بالجماعة */
+#group-details {
+    display: none;
+    background: rgba(191, 174, 156, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* تحسين استايل الموبايل */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    input, select {
+        width: 100%;
+    }
+}
+
+/*///////////////////////////////////////
+input, select, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #218838;
+}
+*/
